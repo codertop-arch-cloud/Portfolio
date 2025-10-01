@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Earth & Moon Orbit</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: radial-gradient(ellipse at center, #000010 0%, #000000 100%);
+      overflow: hidden;
+    }
+
+    /* Add a starry background effect */
+    body::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: url("https://www.transparenttextures.com/patterns/stardust.png");
+      opacity: 0.6;
+      animation: star-move 100s linear infinite;
+    }
+
+    @keyframes star-move {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-500px, -500px); }
+    }
+
+    .space {
+      position: relative;
+      width: 500px;
+      height: 500px;
+    }
+
+    /* Earth */
+    .earth {
+      width: 120px;
+      height: 120px;
+      background: url("https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg");
+      background-size: cover;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 40px rgba(0, 100, 255, 0.9);
+      animation: spin 30s linear infinite;
+    }
+
+    /* Orbit path */
+    .orbit {
+      width: 320px;
+      height: 320px;
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotateOrbit 12s linear infinite;
+    }
+
+    /* Moon */
+    .moon {
+      width: 50px;
+      height: 50px;
+      background: url("https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg");
+      background-size: cover;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 20px rgba(200,200,200,0.8);
+      animation: spin 10s linear infinite;
+    }
+
+    @keyframes rotateOrbit {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @keyframes spin {
+      from { background-position: 0 0; }
+      to { background-position: 100% 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="space">
+    <div class="earth"></div>
+    <div class="orbit">
+      <div class="moon"></div>
+    </div>
+  </div>
+</body>
+</html>

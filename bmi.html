@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator (No JS)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b1a3d;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .bmi-container {
+      background: rgba(255,255,255,0.1);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      text-align: center;
+      min-width: 300px;
+    }
+    .bmi-container h1 {
+      margin-bottom: 20px;
+    }
+    .bmi-container input {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+    .bmi-container button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      background: gold;
+      color: #0b1a3d;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .bmi-container button:hover {
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="bmi-container">
+    <h1>BMI Calculator</h1>
+    <form action="https://www.calculatorsoup.com/calculators/health/bmi-calculator.php" method="get" target="_blank">
+      <input type="number" name="weight" placeholder="Weight (kg)" required>
+      <input type="number" name="height" placeholder="Height (cm)" required>
+      <button type="submit">Calculate BMI</button>
+    </form>
+  </div>
+</body>
+</html>
