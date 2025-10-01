@@ -7,11 +7,7 @@
 <link rel="icon" href="favicon.png" type="image/png">
 <meta name="description" content="Portfolio of Aarsheya Jasrotia showcasing skills, projects, and contact details.">
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
@@ -24,20 +20,25 @@ body {
 
 nav {
     position: fixed;
-    top: 20px;
-    right: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff69b4;
+    padding: 15px 0;
     display: flex;
-    gap: 25px;
+    justify-content: center; /* Center-aligns the links */
+    gap: 30px;
     z-index: 1000;
-    background-color: lightblue;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
+
 nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     transition: color 0.3s;
 }
-nav a:hover { color: #ffd6e0; }
+nav a:hover { color: #fffacd; }
 
 .hero {
     display: flex;
@@ -57,11 +58,7 @@ nav a:hover { color: #ffd6e0; }
     box-shadow: 0 0 20px rgba(255,255,255,0.3);
     animation: fadeIn 2s ease-out forwards;
 }
-.center-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+.center-image img { width: 100%; height: 100%; object-fit: cover; }
 .bio {
     font-size: 1.4rem;
     font-style: italic;
@@ -86,10 +83,7 @@ nav a:hover { color: #ffd6e0; }
     text-decoration: none;
     transition: transform 0.2s, opacity 0.2s;
 }
-.cta-btn:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
+.cta-btn:hover { transform: scale(1.05); opacity: 0.9; }
 
 .flower-divider {
     text-align: center;
@@ -97,9 +91,6 @@ nav a:hover { color: #ffd6e0; }
     margin: 60px 0 40px;
     color: #ffd6e0;
     opacity: 0.8;
-}
-.flower-divider span {
-    margin: 0 10px;
 }
 
 section {
@@ -160,18 +151,9 @@ section h3, section p {
     font-weight: bold;
     transition: transform 0.2s, opacity 0.2s;
 }
-.github-btn {
-    background: #24292f;
-    color: #fff;
-}
-.live-btn {
-    background: #4caf50;
-    color: #fff;
-}
-.btn:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
+.github-btn { background: #24292f; color: #fff; }
+.live-btn { background: #4caf50; color: #fff; }
+.btn:hover { transform: scale(1.05); opacity: 0.9; }
 
 footer {
     text-align: center;
@@ -180,6 +162,15 @@ footer {
     color: #ffd6e0;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #DDBEA8;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.1rem;
 }
 
 @keyframes fadeIn {
@@ -191,6 +182,7 @@ footer {
     .center-image { width: 250px; height: 320px; }
     .bio { font-size: 1.2rem; margin: 20px; }
     section h1 { font-size: 1.8rem; }
+    nav { justify-content: center; flex-wrap: wrap; gap: 15px; }
 }
 </style>
 </head>
@@ -240,7 +232,7 @@ footer {
             <h3>BMI Calculator</h3>
             <div class="project-buttons">
                 <a href="https://github.com/codertop-arch-cloud/PROJECTS/blob/main/bmi.html" target="_blank" class="btn github-btn">GitHub</a>
-                <a href="file:///Users/aanshu1/Desktop/bmi%20calculator/bmi.html" target="_blank" class="btn live-btn">Open</a>
+                <a href="https://codertop-arch-cloud.github.io/Portfolio/bmi.html" target="_blank" class="btn live-btn">Open</a>
             </div>
         </div>
 
@@ -249,7 +241,7 @@ footer {
             <h3>Mother Teresa Tribute</h3>
             <div class="project-buttons">
                 <a href="https://github.com/codertop-arch-cloud/PROJECTS/blob/main/teresa.html" target="_blank" class="btn github-btn">GitHub</a>
-                <a href="file:///Users/aanshu1/Desktop/mother%20teresa/teresa.html" target="_blank" class="btn live-btn">Open</a>
+                <a href="https://codertop-arch-cloud.github.io/Portfolio/teresa.html" target="_blank" class="btn live-btn">Open</a>
             </div>
         </div>
 
@@ -258,7 +250,7 @@ footer {
             <h3>Earth Moon model</h3>
             <div class="project-buttons">
                 <a href="https://github.com/codertop-arch-cloud/PROJECTS/blob/main/earthmoon.html" target="_blank" class="btn github-btn">GitHub</a>
-                <a href="file:///Users/aanshu1/Desktop/earthmoonmodel/earthmoon.html" target="_blank" class="btn live-btn">Open</a>
+                <a href="https://codertop-arch-cloud.github.io/Portfolio/earthmoon.html"  target="_blank" class="btn live-btn">Open</a>
             </div>
         </div>
 
@@ -267,7 +259,7 @@ footer {
             <h3>Ferris Wheel</h3>
             <div class="project-buttons">
                 <a href="#" target="_blank" class="btn github-btn">GitHub</a>
-                <a href="file:///Users/aanshu1/Desktop/ferris%20wheel%20/project.html" target="_blank" class="btn live-btn">Open</a>
+                <a href="https://codertop-arch-cloud.github.io/Portfolio/ferriswheel.html" target="_blank" class="btn live-btn">Open</a>
             </div>
         </div>
     </div>
@@ -277,10 +269,10 @@ footer {
 
 <section id="contact">
     <h1>CONTACT ME</h1>
-    <h3><a href="tel:9768889901" style="color:#DDBEA8; text-decoration:none;">Phone: 9622452701</a></h3>
-    <h3><a href="https://mail.google.com/mail/?view=cm&fs=1&to=aarsheya244@gmail.com" target="_blank" style="color:#DDBEA8; text-decoration:none;">Email: aarsheya244@gmail.com</a></h3>
-    <h3><a href="https://www.linkedin.com/in/aarsheya-jasrotia-38271122b" style="color:#DDBEA8;">LinkedIn</a></h3>
-    <h3><a href="https://github.com/codertop-arch-cloud" style="color:#DDBEA8;">GitHub</a></h3>
+    <h3><a href="tel:9622452701" class="contact-link">📞 Phone: 9622452701</a></h3>
+    <h3><a href="https://mail.google.com/mail/?view=cm&fs=1&to=aarsheya244@gmail.com" target="_blank" class="contact-link">✉️ Email: aarsheya244@gmail.com</a></h3>
+    <h3><a href="https://www.linkedin.com/in/aarsheya-jasrotia-38271122b" target="_blank" class="contact-link">🔗 LinkedIn</a></h3>
+    <h3><a href="https://github.com/codertop-arch-cloud" target="_blank" class="contact-link">🐱 GitHub</a></h3>
 </section>
 
 <footer>
@@ -288,4 +280,4 @@ footer {
 </footer>
 
 </body>
-</html> 
+</html>
